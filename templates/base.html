@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  {% for page in pages %}
+      {% if page.title == title %}
+  <title> {{ page.title }} </title>
+{% endif %}
+  {% endfor %}
+
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Khula&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Sumana&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/era-styles.css">
+
+
+  <div class="jumbotron text-center" style="margin-bottom:0">
+
+{% for page in pages %}
+    {% if page.title == title %}
+
+    <h1> {{ page.title }} </h1>
+{% endif %}
+{% endfor %}
+
+  </div>
+
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark" role="navigation">
+
+            <button class="navbar-toggler" type="button"
+            data-toggle="collapse" data-target="#collapsibleNavbar">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+              <ul class="navbar-nav navbar-center">
+
+               {% for page in pages %}
+                    <li class="nav-item">
+                  {% if page.title == title %}
+                    <a class="nav-link active" href="{{ page.basename }}">{{ page.title }}</a>
+                  {% else %}
+                    <a class="nav-link" href="{{ page.basename }}">{{ page.title }}</a>
+                  {% endif %}
+               {% endfor %}
+                 <!-- <a class="nav-link active" href="index.html">home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="gallery.html">gallery</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="projects.html">projects</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">contact</a> -->
+                </li>
+              </ul>
+            </div>
+          </nav>
+
+</head>
+
+
+<body>
+
+
+{{content}}
+
+
+</body>
+
+
+</html>

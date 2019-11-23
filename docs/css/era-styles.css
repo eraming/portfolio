@@ -1,0 +1,47 @@
+
+body {
+  background-image: url("../img/buds.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+#collapsibleNavbar {
+  justify-content: center;
+  color: rgb(250, 248, 252);
+}
+
+
+
+.jumbotron {
+  background-image: url("../img/buds.jpg");
+  font-family: 'Sumana', serif;
+
+}
+
+h1 {
+  color: beige;
+}
+
+.container {
+  padding: 20px 50px 20px 50px;
+  background-color: rgba(250, 248, 252, 0.55);
+  min-width: 100vw;
+  min-height: 80vw;
+}
+
+
+.main-content {
+  padding-bottom: 50px;
+  margin-bottom: 100px;
+}
+
+h2, h3, h4 {
+  font-family: 'Sumana', serif;
+  color: 575145;
+}
+
+p {
+text-align: left;
+
+}
